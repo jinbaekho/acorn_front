@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 50px;
+        }
+        body{background-image: url(/images/발빠짐\ 주의.jpeg); contain: cover;}
+        .modalbox{
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            right: 100px;
+            bottom: 100px;
+            background-color: #00000030;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .modalbox.active{
+            display: flex;
+        }
+        .modalcon{
+            margin: auto;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="op">열기&닫기
+    </button>
+    <div class="modalbox">
+        <div class="modalcon">
+            <p id="tit">내용</p>
+        </div>
+    </div>
+    <script>
+        document.querySelector('#op').onclick = function(){
+            document.querySelector('.modalbox').classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

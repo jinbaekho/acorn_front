@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라면</title>
+</head>
+<body>
+    <img src="https://i.namu.wiki/i/8s7OaNPsZ8KC1e8RQ6QZEwgfFUoIVVOIm0jA72-UO6Imw0OgI1aEK_DulMeXWbg4tstts3IQFMJS0jmYKD9rzQ.webp" alt="">
+    <p>기본 : 4000원</p>
+    <fieldset id="sideM">
+        <legend>토핑</legend>
+        <input type="checkbox" name="sect1" id="sect1" value="300">
+        <label for="sect1">고추토핑(300원)</label>
+
+        <input type="checkbox" name="sect2" id="sect2" value="400">
+        <label for="sect2">치즈토핑(400원)</label>
+
+        <input type="checkbox" name="sect3" id="sect3" value="500">
+        <label for="sect3">햄토핑(500원)</label>
+
+        <input type="checkbox" name="sect4" id="sect4" value="600">
+        <label for="sect4">파토핑(600원)</label>
+
+        <input type="checkbox" name="sect5" id="sect5" value="10000">
+        <label for="sect5">소고기(10,000원)</label>
+
+        <input type="checkbox" name="sect6" id="sect6" value="367200">
+        <label for="sect6">캐비어(367,200원)</label>
+
+    </fieldset>
+    <fieldset>
+        <legend>합계</legend>
+        <input type="text" readonly id="price" value="4000">원
+    </fieldset>
+
+    
+    <script>
+        console.log(document.querySelectorAll('#sideM > input').length)
+        let MM=document.querySelectorAll('input');
+        const $pr=document.querySelector('#price');
+
+        for(i=0;i<document.querySelectorAll('#sideM > input').length;i++){
+           let adpr=MM[i].value
+           MM[i].addEventListener('click',function(x){tot(x,adpr)})
+    }
+        function tot(x,y){
+        if(x.currentTarget.checked == true){
+                $pr.value=Number($pr.value)+Number(y);
+            }else{$pr.value=Number($pr.value)-Number(y);}}
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀 합치기 연습</title>
+    <style>
+        table, th, td{border: 1px solid #ccc;
+        border-collapse:collapse;}
+        th{padding: 15px;}
+        tr > td:nth-child(odd) {width: 120px;}
+        tr > td:nth-child(even) {width: 300px;}
+
+    </style>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <th>이름</th> <th></th> <th>연락처</th> <th></th>
+        </tr>
+        <tr>
+            <td>주소</td> <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td>공부하는것</td> <td colspan="3"></td>
+        </tr>
+    </table>
+</body>
+</html>

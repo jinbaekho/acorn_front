@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>주문 정보</legend>
+        <ul>
+            <li>
+                <label for="nana">이름 : </label>
+                <input type="text" name="nana" id="nana">
+            </li>
+            <li>
+                <label for="phone">연락처 : </label>
+                <input type="text" name="phone" id="phone">
+            </li>
+            <li>
+                <label for="addd">주소 : </label>
+                <input type="text" name="addd" id="addd">
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+        <legend>배송 정보</legend>
+        <ul>
+            <li>
+                <input type="checkbox" name="chch" id="chch">
+                <label for="chch">주문정보와 같음</label>
+            </li>
+            <li>
+                <label for="nana2">이름 : </label>
+                <input type="text" name="nana2" id="nana2">
+            </li>
+            <li>
+                <label for="phone2">연락처 : </label>
+                <input type="text" name="phone2" id="phone2">
+            </li>
+            <li>
+                <label for="addd2">주소 : </label>
+                <input type="text" name="addd2" id="addd2">
+            </li>
+        </ul>
+    </fieldset>
+    <button type="submit">결제</button>
+    <script>
+        let ck=document.querySelector('#chch');
+
+        ck.addEventListener('click',()=>{
+            if(ck.checked == true){
+                document.querySelector('#nana2').value = document.querySelector('#nana').value;
+                document.querySelector('#phone2').value = document.querySelector('#phone').value;
+                document.querySelector('#addd2').value = document.querySelector('#addd').value;
+            }else{
+                document.querySelector('#nana2').value ='';
+                document.querySelector('#phone2').value ='';
+                document.querySelector('#addd2').value ='';
+            }
+        })
+    </script>
+</body>
+</html>

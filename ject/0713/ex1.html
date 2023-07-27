@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+    <style>
+        .me1,.me2,.me3,.me4{
+            display: flex;
+            justify-content: space-between;
+            width:23%;
+            height: 50px;
+            border: 1px rgb(204, 204, 204) solid;
+            align-items: center;
+            font-weight: bolder;
+            padding: 5px;
+        }
+        .me1:hover,.me2:hover,.me3:hover,.me4:hover{
+            background-color: aquamarine;
+            color: whitesmoke;
+        }
+        .to{
+            display: flex;
+            justify-content: space-around;
+        }
+        .to{
+            border:1px black dashed;
+            padding: 5px;
+        }
+        .ne{
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            top: 200px;
+        }
+        .im,.lin{
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            width: 400px;
+            height: 250px;
+            border: 1px rgb(204, 204, 204) solid;
+            line-height: 30px;
+            padding: 0px 20px;
+        }
+        a{color: grey;}
+        a:hover{color: burlywood;}
+    </style>
+</head>
+<body>
+    <p></p>
+    <hr>
+    <h2>new arrivals</h2>
+    <section class="to">
+        <div class="me1">
+            <section>오징어 볶음</section>
+            <section>7000원</section>
+        </div>
+        <div class="me2">
+            <section>라면</section>
+            <section>4000원</section>
+        </div>
+        <div class="me3">
+            <section>소주</section>
+            <section>5000원</section>
+        </div>
+        <div class="me4">
+            <section>공기밥</section>
+            <section>1000원</section>
+        </div>
+    </section>
+    <section class="ne">
+        <div class="im"><img src="/images/스폰지밥.gif" alt="" width="100%"></div>
+        <div class="lin">
+            <center>오징어는 다른 생선보다 2~3배, 육류보다는 25~66배 정도 많은 타우린이 함유되어 있어 타우린의 보고라 할 수 있다. 타우린은 피로 해소 및 스테미나 증강에 효능이 있으며, 심장 건강과 시력 보존, 불안 및 스트레스 완화에 좋고 인슐린의 분비를 촉진해 당뇨병에 좋은 효능이 있다.
+            <br><a href="#">한입하러가기</a></center>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let rad, sqc, sqr, trc, trr, cir, squ, tri;
+      rad = prompt("원의 반지름을 입력하세요");
+      sqc = prompt("사각형의 세로길이를 입력하세요");
+      sqr = prompt("사각형의 가로길이를 입력하세요");
+      trc = prompt("삼각형의 높이을 입력하세요");
+      trr = prompt("삼각형의 폭을 입력하세요");
+      cir = rad * rad * 3.14;
+      squ = sqc * sqr;
+      tri = (trc * trr) / 2;
+      document.write(
+        "원의 넓이 : " +
+          cir +
+          "<br>사각형의 넓이 : " +
+          squ +
+          "<br>삼각형의 넓이 : " +
+          tri
+      );
+    </script>
+  </body>
+</html>

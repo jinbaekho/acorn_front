@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a태그 스타일 타겟 속성</title>
+    <style>
+        [target]{
+            background-color: lightblue;
+            color: blue;
+        }
+        [target=_blank]{
+            background-color: lightcoral;
+        }
+        [title~="제목"]{
+            background-color: aqua;
+        }
+        [lang|=en]{/*lang 속성 값이 en문자열 포함된 모든 요소*/
+            background-color: yellow;
+        }
+        a[href^="https"]{/*^= ~로 시작하는 요소*/
+            background-color: red;
+        }
+        a[href$="com"]{/*$= ~로 끝나는 요소*/
+            background-color: blue;
+        }
+        a[href*="da"]{/**= ~가 포함된 요소*/
+            background-color:rgb(255, 0, 212)d;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>프론트엔드는 많은 앞 단에 이루어지는 <a href="#"><i>웹 사이트</i></a>를 처리한다</p>
+        <p><a href="#" target="_self" title="제목">웹 기획</a></p>
+        <p><a href="#" target="_blank" title="쉡쉡">웹 스토리보드</a></p>
+        <p><a href="#" title="뤶쳏히">웹스토리텔링</a></p>
+
+        <div>
+            <h1 class="section" title="스타일선택자지정">스타일 선택자 지정</h1>
+            <p class="textweb" title="웹디자이너">웹 디자이너</p>
+        </div>
+        <p><a href="#" target="_self" title="제목">웹 기획</a></p>
+        <p><a href="#" target="_blank" title="쉡쉡">웹 스토리보드</a></p>
+        <p><a href="#" title="(web)뤶쳏히" lang="en">웹스토리텔링</a></p>
+
+        <p><a href="https://naver.com" title="제목">웹 기획</a></p>
+        <p><a href="https://daum.net" target="_blank" title="쉡쉡">웹 스토리보드</a></p>
+        <p><a href="https://google.com" title="(web)뤶쳏히" lang="en">웹스토리텔링</a></p>
+    </div>
+</body>
+</html>

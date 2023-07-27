@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: flex;
+            width: 400px;
+            border: 8px solid skyblue;
+            flex-direction: column;
+        }
+        .box *{
+            margin: 10px ;
+        }
+        .resu{
+            box-sizing: border-box;
+            border: 5px dashed red;
+            background-color: rgba(255, 0, 0, 0.411);
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: bold;
+            width: 400px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="https://www.hanhodaily.com/news/photo/201811/58388_18529_441.jpg" alt="">
+        원래가격<input id="v1" type="text" value="">
+        할인율<input id="v2" type="text" value="">
+        <button onclick="ma()">계산</button>
+    </div>
+    <div class="resu"></div>
+
+    <script>
+        function ma(){
+            let p1 = document.querySelector('#v1').value;
+            let p2 = document.querySelector('#v2').value;
+            document.querySelector('.resu').innerHTML = `${document.querySelector('#v1').value}원의 상품 ${document.querySelector('#v2').value}%의 할인률을 적용 하여 ${(p1-(p1*(p2/100)))}원입니다`
+        }
+    </script>
+</body>
+</html>

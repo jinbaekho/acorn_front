@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style>
+        .box::after{
+            content: "이후 콘텐츠 내용";
+            color: red;
+        }
+        .box::before{
+            content: "이전 콘텐츠 내용";
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>가상요소 선택자</h1>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inne{
+            font-size: 500px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" id="t1">
+        <input type="text" name="" id="t2">
+        <button id="gg">ㄱㄱ</button>
+    </form>
+        <div id="inne"></div>
+    <script>
+        let $v1=document.querySelector('#t1')
+        let $v2=document.querySelector('#t2')
+
+        document.querySelector('#gg').addEventListener('click',()=>{
+            document.querySelector('#inne').innerHTML=GCD($v1.value,$v2.value);
+        })
+
+            function GCD(n,m){
+            event.preventDefault()
+           let max = n>m ? n : m
+           for(i=1; i<=max; i++ )
+            if(n%i===0 && m%i===0){
+                last=i;
+            }
+            return last;
+        }
+    </script>
+</body>
+</html>

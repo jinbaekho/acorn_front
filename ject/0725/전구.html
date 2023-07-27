@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>onclick사용</p>
+    <img src="/images/속상해1.png" alt="" onclick="tg()">
+
+    <script>
+        function tg(){
+            if(document.querySelector('img').src="/images/속상해1.png"){
+                document.querySelector('img').src="/images/속상해2.png";
+                alert('z1');
+            }
+            if(document.querySelector('img').src="/images/속상해2.png"){
+                document.querySelector('img').src = "/images/속상해1.png";}
+                alert('z2');
+    }
+    </script>
+</body>
+</html>

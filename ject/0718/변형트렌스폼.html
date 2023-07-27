@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형트렌스폼</title>
+    <style>
+        .origin{
+            perspective: 200px;
+            border: 1px solid;
+            width:fit-content;
+            margin: 50px;
+        }
+        .movex:hover{
+            transform: translateX(50px);
+        }
+        .movey:hover{
+            transform: translateY(50px);
+        }
+        .movez:hover{
+            transform: translate(50px,50px);
+        }
+        .scalex:hover{transform: scaleX(1.2);}
+        .scaley:hover{transform: scaley(1.5);}
+        .scalez:hover{transform: scale(0.7);}
+        .rotate1:hover{transform: rotate(45deg);}
+        .rotate2:hover{transform: rotate(-45deg);}
+        .rotate3dx:hover{transform: rotateX(45deg);}
+        .rotate3dy:hover{transform: rotateY(45deg);}
+        .rotate3dz:hover{transform: rotateZ(45deg);}
+        .rotate3dxyz:hover{transform: rotate3D(2.5,1.2,-1.5,45deg);}
+        .skewx:hover{transform: skewX(30deg);}
+        .skewy:hover{transform: skewy(30deg);}
+        .skewz:hover{transform: skew(30deg,80deg);}
+    </style>
+</head>
+<body>
+    <h2>변형 transform</h2>
+    <p>특정 요소의 크기나 형태가 변하는 것을 변형 또는 transform이라고 한다.
+        사용자의 동작에 반응해 텍스트나 이미지등을 움직이게 할 수 있다.
+        2차원(x,y)/3차원(x,y,z):원근감의 표현z축으로 이동하는데 가까워지고 멀어진다.
+    </p>
+    <div class="origin">
+        <div class="movex"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="movey"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="movez"><img src="/images/로그인.png" alt=""></div>
+    </div>
+
+    <div class="origin">
+        <div class="scalex"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="scaley"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="scalez"><img src="/images/로그인.png" alt=""></div>
+    </div>
+
+    <div class="origin">
+        <div class="rotate1"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="rotate2"><img src="/images/로그인.png" alt=""></div>
+    </div>
+
+    <div class="origin">
+        <div class="rotate3dx"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="rotate3dy"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="rotate3dz"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="rotate3dxyz"><img src="/images/로그인.png" alt=""></div>
+    </div>
+
+    <div class="origin">
+        <div class="skewx"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="skewy"><img src="/images/로그인.png" alt=""></div>
+    </div>
+    <div class="origin">
+        <div class="skewz"><img src="/images/로그인.png" alt=""></div>
+    </div>
+</body>
+</html>

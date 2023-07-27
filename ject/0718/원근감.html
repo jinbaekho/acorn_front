@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원근감</title>
+    <style>
+        .origin{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            float: left;
+            margin: 30px;
+            transition: 1s ease;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        #pers{
+            perspective: 150px;
+        }
+        .rotateX:hover{transform: rotateX(50deg);}
+        .rotateY:hover{transform: rotateY(50deg);}
+
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <img src="/images/애옹.jpeg" alt="">
+    </div>
+    <div class="origin">
+        <div class="rotateX">
+            <img src="/images/애옹.jpeg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rotateY">
+            <img src="/images/애옹.jpeg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rotateX" id="pers">
+            <img src="/images/애옹.jpeg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rotateY" id="pers">
+            <img src="/images/애옹.jpeg" alt="">
+        </div>
+    </div>
+</body>
+</html>

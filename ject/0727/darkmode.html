@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; transition: .5s;}
+        
+        .case{
+            width: 40px;
+            height: 20px;
+            border: 2px solid rgb(197, 185, 165);
+            border-radius: 200px;
+            background-color: papayawhip;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .bt{
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: aliceblue;
+            box-sizing: border-box;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="case">
+        <div class="bt"></div>
+    </div>
+
+    <script>
+        document.querySelector('.case').value = 'light'
+        document.querySelector('.case').onclick = function(){
+            if(document.querySelector('.case').value == 'light'){
+            document.querySelector('.case').value = 'dark';
+            document.querySelector('body').style.backgroundColor='#202020'
+            document.querySelector('.case').style.backgroundColor='#362b2b'
+            document.querySelector('.case').style.border='2px solid #777777'
+            document.querySelector('.bt').style.border='1px solid #999999'
+            document.querySelector('.bt').style.transform = 'translate(20px,0)'
+            }
+            else if(document.querySelector('.case').value == 'dark'){
+            document.querySelector('.case').value = 'light';
+            document.querySelector('body').style.backgroundColor='#ffffff'
+            document.querySelector('.case').style.backgroundColor='papayawhip'
+            document.querySelector('.case').style.border='2px solid rgb(197, 185, 165)'
+            document.querySelector('.bt').style.border='1px solid gray'
+            document.querySelector('.bt').style.transform = 'translate(0,0)'
+            }
+        }
+    </script>
+</body>
+</html>

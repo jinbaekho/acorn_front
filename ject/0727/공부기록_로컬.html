@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기록</title>
+  </head>
+  <body>
+    <h1>기록</h1>
+    <form>
+      <input type="text" id="it" autofocus />
+      <button id="adbt" type="button">추가</button>
+      <button id="delbt">삭제</button>
+    </form>
+    <hr />
+    <div class="itli"></div>
+    <script>
+      let itli = [];
+      let adbt = document.querySelector("#adbt");
+      adbt.addEventListener("click", addList);
+
+      function addList() {
+        if (document.querySelector("#it").value != null) {
+          itli.push(document.querySelector("#it").value);
+          document.querySelector("#it").value = "";
+        }
+        showList();
+      }
+      function showList() {
+        let list = "<ul>";
+        for (i = 0; i < itli.length; i++) {
+          list += "<li>" + itli[i] +'<span class="close" id="'+i+'"> X</span></li>';
+        }
+        list += "</ul>";
+        document.querySelector('.itli').innerHTML=list
+      }
+
+      // localStorage.setItem(key,value)
+      // localStorage.getItem(key)
+    </script>
+  </body>
+</html>

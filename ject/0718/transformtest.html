@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내집마련</title>
+    <style>
+      body {
+        background-color: rgb(152, 167, 206);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        perspective: 200px;
+      }
+      .total {
+        display: flex;
+      }
+      [class*="home"] {
+        width: 200px;
+        padding: 40px;
+        /* border: solid; */
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        background-color: rgb(216, 225, 233);
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
+        line-height: 30px;
+      }
+      [class*="home"]:hover {
+        position: relative;
+        transform: scale(1.03);
+        /* transform: translate(-10px -10px); */
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+        animation: hov 500ms ease-out;
+      }
+      @keyframes hov {
+        0% {
+          /* transform: translateX(10px); */
+          /* transform: translateY(10px); */
+          transform: scale(1);
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
+        }
+      }
+
+      p {
+        font-weight: bold;
+      }
+      small {
+        color: rgb(190, 190, 190);
+      }
+      @media screen and (max-width: 970px) {
+        .total {
+          flex-direction: column;
+        }
+      }
+      .pop {
+        display: none;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: blanchedalmond;
+        /* display: none; */
+        position: sticky;
+        top: 50vh;
+      }
+      .home1:click {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pop">
+      <h1>건물을 구매 할 수 없습니다.</h1>
+    </div>
+    <h1>건물구입</h1>
+    <div class="total">
+      <div class="home1">
+        <h1>별장</h1>
+        <h4>저렴한 가격 저렴한 통행료</h4>
+        <small>최대</small>
+        <p>별장가격 100만$</p>
+        <img src="/images/별장.png" alt="" />
+      </div>
+      <div class="home2">
+        <h1>빌딩</h1>
+        <h4>적당한 가격 괜찮은 통행료</h4>
+        <small>최대</small>
+        <p>별장가격 300만$</p>
+        <img src="/images/빌딩.png" alt="" />
+      </div>
+      <div class="home3">
+        <h1>호텔</h1>
+        <h4>비싼 가격 엄청난 통행료</h4>
+        <small>최대</small>
+        <p>별장가격 2000만$</p>
+        <img src="/images/호텔.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <ul class="list">
+                    <li class="it1">it1</li>
+                    <li class="it2">it2</li>
+                    <li class="it3">it3</li>
+                    <li class="it4">it4</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        let $list = document.querySelector('.list');
+        let its = $list.children; //자식요소 선택
+        let $li = document.querySelector('li');
+
+        console.log($list);
+        console.log(its[0]);
+        console.log(its[2]);
+        console.log(its[2].parentElement); //부모요소 선택
+        console.log($li.closest('main')); //제일 가까운 부모요소 선택
+        console.log(its[2].previousElementSibling); //이전 형제요소 선택
+        console.log(its[2].nextElementSibling); //다음 형제요소 선택
+
+    </script>
+</body>
+</html>

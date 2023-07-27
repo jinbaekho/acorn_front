@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      [id*="bt"] {
+        font-size: 80px;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      .int {
+        font-size: 80px;
+      }
+
+      .move {
+        display: flex;
+        justify-content: space-around;
+        font-size: 50px;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" id="btp">▲</a>
+    <div class="int">0</div>
+    <a href="#" id="btm">▼</a>
+    <div class="mo">
+      <div class="move">
+        <div class="le">←</div>
+        <div class="ri">→</div>
+      </div>
+      <div class="box"></div>
+    </div>
+    <script>
+      let btp = document.querySelector("#btp"),
+        btm = document.querySelector("#btm"),
+        int = document.querySelector(".int"),
+        num = 0;
+      btp.addEventListener("click", (e) => {
+        e.preventDefault();
+        num++;
+        int.innerText = num;
+      });
+      btm.addEventListener("click", (e) => {
+        e.preventDefault();
+        num--;
+        int.innerText = num;
+      });
+
+      let momo = 0;
+
+      document.querySelector(".le").addEventListener("mousedown", (lex) => {
+        momo--;
+        document.querySelector(".box").style.transform = `translate(${
+          momo * 10
+        }px,0)`;
+      console.log(lex.buttons)
+      dil
+      });
+      document.querySelector(".ri").addEventListener("mousedown", (rix) => {
+        momo++;
+        document.querySelector(".box").style.transform = `translate(${
+          momo * 10
+        }px,0)`;
+      console.log(rix)
+      });
+      window.addEventListener('mousemove', mousemove);
+      function mousemove(event){
+    console.log(event.buttons)
+}
+
+      </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="tit">자바스크립트</h2>
+    <section id="wrap">
+        <article class="box1"></article>
+        <article class="box2"></article>
+        <article class="box3"></article>
+        <article class="box4"></article>
+        <article class="box5"></article>
+
+        <script>
+            const $tit=document.querySelector('#tit'); 
+            const $wrap=document.getElementById('wrap'); //id호출 2가지
+            const $items=document.querySelectorAll('article');
+
+            console.log($tit);
+            console.log($wrap);
+            console.log($items);
+
+            for(i=0; i<$items.length; i++){
+                console.log($items[i]);
+            }
+        </script>
+    </section>
+</body>
+</html>

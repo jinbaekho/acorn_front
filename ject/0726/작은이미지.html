@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>.small{
+            width: 40px;
+            height: 40px;
+        }
+        div>.large{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img class="addpic" src="" alt="" width="400px" height="400px">
+    <div>
+        <img class="small" id="pic1" onclick="big('pic1')" src="/images/별장.png" alt="">
+        <img class="small" id="pic2" onclick="big('pic2')" src="/images/빌딩.png" alt="">
+        <img class="small" id="pic3" onclick="big('pic3')" src="/images/호텔.png" alt="">
+    </div>
+
+    <script>
+        function big(x){
+            if(document.querySelector('.large')){
+            document.querySelector('.large').classList.add('small')
+            document.querySelector('.large').classList.remove('large')
+            }
+            document.querySelector('#'+x).classList.remove('small')
+            document.querySelector('#'+x).classList.add('large')
+            document.querySelector('.addpic').src = document.querySelector('#'+x).src;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 400px;
+            height: 400px;
+            border: 1px solid;
+            padding: 50px;
+            margin: 100px auto;
+        }
+        #wrap.on article{
+            background-color: hotpink;
+        }
+        #wrap article{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <section id="wrap">
+        <article>클릭</article>
+        <!-- 특정 클래스가 있는지 확인하는 contains()함수
+        클래스명 on이 있는지 확인 후 없다면 만들고 있으면 없앰  -->
+    </section>
+
+    <script>
+        let $wrap=document.querySelector('#wrap')
+        let $box=document.querySelector('article')
+        $wrap.addEventListener('click',()=>{
+            $wrap.classList.toggle('on')
+            
+        })
+    </script>
+</body>
+</html>

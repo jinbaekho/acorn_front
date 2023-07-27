@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            border-radius: 50%;
+            margin: 50px auto;
+            font-size: 30px;
+            line-height: 200px;
+            text-align: center;
+            animation: anima 3s alternate infinite ease-in-out;
+            /* 애니메이션 이름 시간 속성값
+            alternate:갔다왔다
+            infinite:무한반복
+            */
+        }
+        @keyframes anima {
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">ani</div>
+    </div>
+</body>
+</html>

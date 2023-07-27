@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트렌지션 속성</title>
+    <style>
+        .box1{
+            width: 150px;
+            height: 150px;
+            background-color: bisque;
+            transition-property: width,height;
+            transition-delay: 1s;
+            transition-duration: 2s, 1s;
+            transition-timing-function: ease-in;
+        }
+        .box1:hover{
+            width: 200px;
+            height: 170px;
+        }
+        .box2{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(255, 0, 0);
+            transition: 1s ease-in;
+            }
+        .box2:hover{
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+        }
+        #ex div{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            display: inline-block;
+        }
+        #ex:hover div{height: 400px;}
+        #ex .ease{transition: 1s ease;}/*느리다 빠르게*/
+        #ex .linear{transition: 1s linear;}/*같은속도로 진행*/
+        #ex .ease-in{transition: 1s ease-in;}/*느리게 시작*/
+        #ex .ease-out{transition: 1s ease-out;}/*느리게 끝*/
+        #ex .ease-in-out{transition: 1s ease-in-out;}/*느리게 시작 느리게 끝*/
+        /* cubic-bezier(n,n,n,n):0~1값 */
+    </style>
+</head>
+<body>
+    <h2>트렌지션속성</h2>
+    <p>웹 요소등 스타일이 바쒸는것을 의미</p>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <h2>transition-timing-function 속도 곡선 속성 값</h2>
+    <div id="ex">
+        <div class="ease">ease</div>
+        <div class="linear">linear</div>
+        <div class="ease-in">ease-in</div>
+        <div class="ease-out">ease-out</div>
+        <div class="ease-in-out">ease-in-out</div>
+    </div>
+</body>
+</html>

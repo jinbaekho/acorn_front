@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="#">it1</a></li>
+        <li><a href="#">it2</a></li>
+        <li><a href="#">it3</a></li>
+        <li><a href="#">it4</a></li>
+    </ul>
+    <script>
+        const list = document.querySelectorAll('ul li');
+
+        for(let dksl of list){//el 변수명 (for of문)
+            dksl.addEventListener('click',x=>{
+                x.preventDefault();
+                console.log(x.currentTarget.innerText);
+            })
+            //currentTarget 선택한 텍스트를 불러온다
+            //텍스트 내용 변경
+            //innerText 변경 할텍스트
+        }
+    </script>
+</body>
+</html>

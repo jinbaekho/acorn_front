@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 신청서</title>
+    <style>
+        fieldset{width: 500px;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>회원가입을 환영합니다</h1>
+        <fieldset>
+            <legend>사용자정보</legend>
+            <ul>
+                <li><label for="uid">아이디</label>
+                <input type="text" id="uid"></li>
+                
+                <li><label for="em">이메일</label>
+                <input type="text" id="em"></li>
+
+                <li><label for="upw">비밀번호</label>
+                <input type="password" id="upw"></li>
+
+                <li><label for="upw2">비밀번호 확인</label>
+                <input type="password" id="upw2"></li>
+
+                <input type="image" src="../images/로그인.png" width="200" onclick="window.open('test.html')">
+                <input type="button" value="공지 창 열기" onclick="window.open('test.html')">
+                <!--145page-->
+                
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <input type="radio" name="mailing" id="mailing_y" checked>
+            <label for="mailing_y">메일수신</label>
+            <input type="radio" name="mailing" id="mailing_n">
+            <label for="mailing_n">메일수신 안 함</label>
+        </fieldset>
+    </div>
+    <div id="buttons">
+        <input type="button" value="가입하기">
+        <input type="button" value="취소">
+    </div>
+    <br><br><hr><br><br>
+    <div id="login">
+        <h1>회원 정보 입력</h1>
+        <form>
+        <fieldset>
+            <legend>로그인정보</legend>
+            <label for="">아이디<input type="text" size="30"></label> <br>
+            <label for="">비밀번호<input type="password"></label>
+            <input type="button" value="로그인">
+        </fieldset>
+
+        <fieldset>
+            <legend>추가 정보</legend>
+            <label for="emadd">메일주소 : <input type="text" placeholder="ex@exex.com" id="emadd"></label><br><br>
+            메일수신
+            <label for="yy"><input type="radio" name="mailing" id="yy" checked>동의</label>
+            <label for="nn"><input type="radio" name="mailing" id="nn">거부</label><br><br>
+            <label for="num">연락처 : <input type="phone" size="11" maxlength="11" placeholder="- 을 뺴고 입력" id="num"></label><br>
+            <label for="bri">생년월일 : <input type="date" id="bri"></label><br>
+            취미
+            <label for="habi1"><input type="checkbox" id="habi1" value="h_1">독서</label>
+            <label for="habi2"><input type="checkbox" id="habi2" value="h_2">음악감상</label>
+            <label for="habi3"><input type="checkbox" id="habi3" value="h_3">운동</label><br><br>
+
+            <label for="path">가입경로<select id="path">
+                <option value="pa1">블로그</option>
+                <option value="pa2">검색</option>
+                <option value="pa3">친구추천</option>
+                <option value="pa4">광고</option>
+                <option value="pa5">기타</option>
+            </select></label><br><br>
+            메모
+            <textarea name="" id="" cols="30" rows="10" placeholder="메모사항을 남겨주세요"></textarea>
+        </fieldset>
+    </div>
+    <div id="button2">
+        <input type="submit" value="제출">
+        <input type="reset" value="취소">
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #fd{
+        width: 100px; height: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fd"></div>
+    <script>
+      let ko, en, ma, tot, rere;
+      function CC(v){
+        document.querySelector('h1').style.backgroundColor=v;
+        document.querySelector('h1').style.width='200px';
+        document.querySelector('h1').style.height='200px';
+        }
+      ko = Number(prompt("국어몇점?"));
+      en = Number(prompt("영어몇점?"));
+      ma = Number(prompt("수학몇점?"));
+      tot = (ko + en + ma)/3;
+      if(tot>=70){rere='합격'; CC("green");}
+      else{rere='불합격'; CC("green");}
+      document.write('<h1>당신의 평균점수는</h1>'+tot+'점입니다   '+rere+'</>');
+    </script>
+  </body>
+</html>

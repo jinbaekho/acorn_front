@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        sum=0;
+        // 1000까지 더하기
+        for(i=0; i <= 1000; i++){
+            sum+=i;
+        }
+        document.write(sum+'<br>');
+        // 10까지 짝수 더하기
+        for(i=0,sum=0;i<=10; i+=2){
+            sum+=i;
+        }
+        document.write(sum+'<br>');
+        // 10까지 홀수더하기
+        for(i=1,sum=0;i<=10; i+=2){
+            sum+=i;
+        }
+        document.write(sum+'<br>');
+        // i만큼 *증가
+        for(i=1,sum="";i<=6; i++){
+            sum += "*";
+        document.write(sum+'<br>');
+        }
+        // i부터 *감소
+        for(i=6; i>=0; i--){
+            for(j=i,sum=""; j>=0; j--){
+                sum+="*";
+            }
+            document.write(sum+'<br>');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            display: inline;
+            border: 2px dashed gray;
+            padding: 0 20px;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+        #id{
+            border: 1px solid black;
+            width: 200px; height: 200px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="CC('green')">G</a></li>
+        <li><a href="#" onclick="CC('orange')">O</a></li>
+        <li><a href="#" onclick="CC('purple')">P</a></li>
+    </ul>
+    <div id="id"></div>
+
+
+    <script>
+        function CC(vc){
+            document.querySelector('#id').style.backgroundColor = vc;
+        }
+    </script>
+</body>
+</html>

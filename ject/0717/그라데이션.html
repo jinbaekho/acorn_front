@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라데이션</title>
+    <style>
+        div{
+            width: 500px;
+            height: 350px;
+            border-radius: 20px;
+        }
+        .grad{
+            background-color: blue;/*그라데이션 지원하지 않는 부라우저용*/
+            background: linear-gradient(to right bottom,blue,white);
+            /* 오른쪽 아래 방향으로 파랑에서 흰색 */
+
+            /* 브라우저 버전에 따른 입력 방법 -접두사- */
+            /* 표준화된 구문 외에 그라데이션 지원하지 않는 브라우저 */
+            /* -webkit- 사파리 5.1 ~ 6.0 */
+            /* -moz- 파이어폭스 3.6~15 */
+            /* -o- 오페라 11.1~12.0 */
+        }
+        .grad2{
+            background: violet;
+            background: linear-gradient(to bottom,violet,white 30%,blue);
+        }
+        .grad3{
+            background: red;
+            background: linear-gradient(0deg,red,orange,yellow,green,blue,darkblue,magenta);
+            /* 6시 0도 기준 시계방향 */
+        }
+        .grad4{
+            background: red;
+            background: radial-gradient(circle,red,orange,yellow,green,blue,darkblue,magenta);
+        }
+        .grad5{
+            background: red;
+            background: radial-gradient(ellipse,red,orange,yellow,green,blue,darkblue,magenta);
+        }
+        .grad6{
+            background: red;
+            background: radial-gradient(circle at 20% 20%,yellow,orange);
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px gray;
+        }
+        .grad7{
+            background: red;
+            background: radial-gradient(circle at 80% 45%,red,orange,yellow,green,blue,darkblue,magenta);
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px gray;
+        }
+        .grad8{
+            background: red;
+            background: repeating-linear-gradient(red ,blue 20px);
+        }
+        li{
+            display: inline-flex;
+            width: 300px;
+            height: 300px;
+            border: solid 1px black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grad"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+    <div class="grad4"></div>
+    <div class="grad5"></div>
+    <div class="grad6"></div>
+    <div class="grad7"></div>
+    <div class="grad8"></div>
+    <ul>
+        <li class="b1"></li>
+        <li class="b2"></li>
+        <li class="b3"></li>
+        <li class="b4"></li>
+        <li class="b5"></li>
+    </ul>
+</body>
+</html>

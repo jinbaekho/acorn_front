@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 표 만들기_병합</title>
+</head>
+<body>
+    <table border>
+        <caption>색깔의 종류</caption>
+        
+        <colgroup>
+        <col style="background-color: bisque;">
+        <col>
+        <col style="width: 150px;">
+        <col style="width: 150px;">
+        </colgroup>
+
+        <thead>
+        <tr>
+            <th>번호</th> <th colspan="2">밝은계열</th> <th>어두운 계열</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>1</td> <td>빨강</td> <td>분홍</td> <td>갈색</td>
+        </tr>
+        <tr>
+            <td>2</td> <td>파랑</td> <td rowspan="2" style="background-color: aquamarine;">하늘</td> <td>남색</td>
+        </tr>
+        <tr>
+            <td>3</td> <td>노랑</td>  <td>황토색</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>합계</td> <td>3개</td> <td>3개</td> <td>3개</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

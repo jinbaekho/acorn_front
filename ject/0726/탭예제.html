@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+        }
+        .btset{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .int{
+            width: 100%;
+        }
+        .fdzz{
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div class="btset">
+        <button class="t1" onclick="ot(event,)">탭 1</button>
+        <button class="t2" onclick="ot(event,)">탭 2</button>
+        <button class="t3" onclick="ot(event,)">탭 3</button>
+    </div>
+    <div class="int int1">북치북북1</div>
+    <div class="int int2">북치북북2</div>
+    <div class="int int3">북치북북3</div>
+
+    <script>
+        function ot(x,y){
+            x.currentTarget.classList.toggle('fdzz');
+        }
+    </script>
+</body>
+</html>

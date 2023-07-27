@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원근감2</title>
+    <style>
+        #container{
+            width: 850px;
+            border: 1px solid;
+            display: flex;
+            margin: 20px auto;
+        }
+        .origin{
+            border: 1px solid;
+            width: 150px;
+            height: 150px;
+            margin: 30px;
+            perspective: 150px;
+        }
+        .origin > div{
+            width: 150px;
+            height: 150px;
+            background-color: yellowgreen;
+            transition: 100ms;
+        }
+        #rotateX:hover{transform: rotateX(55deg);}
+        #rotateY:hover{transform: rotateY(55deg);}
+        #rotateZ:hover{transform: rotateZ(55deg);}
+        #rotateXYZ:hover{transform: rotate3D(1,1 ,1,45deg);}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="origin">
+            <div id="rotateX"></div>
+        </div>
+        <div class="origin">
+            <div id="rotateY"></div>
+        </div>
+        <div class="origin">
+            <div id="rotateZ"></div>
+        </div>
+            <div class="origin">
+                <div id="rotateXYZ"></div>
+            </div>
+    </div>
+</body>
+</html>

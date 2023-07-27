@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="popop()">열기</button>
+    <script>
+        function popop(){
+            let newWin = window.open('팝업내용.html','pop','width=1000, height=500','left=100 , top=100');
+        if(newWin == null){
+            alert('차단됨')
+        }
+    }
+    newWin.moveBy(1000,1000);
+    </script>
+</body>
+</html>

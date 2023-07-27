@@ -1,0 +1,75 @@
+        @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+        body{
+            font-family: 'Diphylleia', serif;
+            text-align: start;
+            margin: 0px;
+        }
+        header {
+            display: flex;
+            height: 100px;
+            align-items: center;
+        }
+
+        .menu {
+            text-align: center;
+            width: 50px;
+            border-radius: 30px;
+            padding: 5px;
+            font-weight: bold;
+            margin: 20px;
+            color: rgb(54, 151, 95);
+        }
+
+        .menu:hover {
+            color: whitesmoke;
+            background-color: rgb(54, 151, 95);
+            transform: scale(1.3);
+        }
+
+        section {
+            height: 500px;
+            background-size: 100vh 100%;
+            background-image: url(https://i.seadn.io/gae/FxotjYdslynPcfpejIcwPTud6MAVFGfdGM_wGfetT5b-KgqSHG-2VjVh3yOm9n-QvfOPdOtOiiOVuDJUz5ZFcOXxH3nzulnu1J0EWA?auto=format&dpr=1&w=1000);
+            display: flex;
+            justify-content: flex-end;            
+            color: azure;
+            padding: 50px;
+            font-size: 20px;
+            flex-direction: column;
+        }
+        h1{
+            text-shadow: 3px 3px 10px whitesmoke;
+        }
+        .int{
+            width: 100px;
+            line-height: 150%;
+            text-align: center;
+            background-color: rgba(54, 151, 94, 0.589);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .int:hover{
+            background-color: rgb(54, 151, 94);
+            color: blue;
+            font-weight: bold;
+        }
+        footer{
+            /* border: 1px solid black; */
+            padding: 5px 20px;
+            line-height: 60px;
+            width:fit-content;
+            color: lightslategray;
+            font-weight: 700;
+        }
+        .bot{
+            display: flex;
+            justify-content: space-around;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        a:visited{
+            color: inherit;
+            text-decoration: none;
+        }

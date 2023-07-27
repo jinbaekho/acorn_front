@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <div class="container">
+        <h1>슈루룩강신청</h1>
+        <form name="testform">
+            <fieldset>
+            <legend>신청인</legend>
+            <ul>
+                <li>
+                    <label for="un">이름</label>
+                    <input type="text" name="un" id="un">
+                </li>
+                <li>
+                    <label for="cla">학과</label>
+                    <select type="text" name="mj" id="mj">
+                        <option value="mj1">1</option>
+                        <option value="mj2">2</option>
+                        <option value="mj3">3</option>
+                        <option value="mj4">4</option>
+                        <option value="mj5">5</option>
+                        <option value="mj6">6</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>신청과목</legend>
+            <label><input type="radio" name="sbj" value="sp">회화</label>
+            <label><input type="radio" name="sbj" value="gr">문법</label>
+            <label><input type="radio" name="sbj" value="wr">작문</label>
+        </fieldset>
+        <fieldset>
+            <legend>메일</legend>
+            <p>메일받을주제</p>
+            <label><input type="checkbox" name="mail" id="nw" value="nw">뉴스</label>
+            <label><input type="checkbox" name="mail" id="di" value="di">회화</label>
+            <label><input type="checkbox" name="mail" id="po" value="po">팝스</label>
+        </fieldset>
+        </form>
+        <button id="send">전송쓰</button>
+    </div>
+    <script>
+        console.log(document.testform.mail.value)
+        let mjset=document.querySelectorAll('#mj');
+        function dpsel(){
+            let seltx= document.mjset[]
+        }
+    </script>
+</body>
+</html>

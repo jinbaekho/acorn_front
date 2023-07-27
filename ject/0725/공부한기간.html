@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 300px;
+            height: 300px;
+            border: solid;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: skyblue;
+            text-align: center;
+            }
+            h1{margin: auto;}
+            div{margin: auto;}
+            span{color: red; font-size: 30px; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <section>
+    <h1>공부한 일수</h1>
+    <div class="di"></div>
+    </section>
+    <script>
+        let now = new Date();
+        let fr = new Date('2023-07-10');
+        let vday = Math.round  ((now-fr)/(60*60*24*1000));
+//         alert(`${now}
+// ${fr}
+// ${vday}`);
+document.querySelector('.di').innerHTML='<span>'+vday+"</span>일 동안<br>공부했습니다<br>ㅊㅊ";
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기록</title>
+</head>
+<body>
+    <h1>기록</h1>
+    <form>
+        <input type="text" id="it" autofocus>
+        <button onclick="inse(); return false">추가</button>
+        <button onclick="delt(event)">삭제</button>
+    </form>
+    <hr>
+    <ul id="dkfo">
+    </ul>
+
+    <script>
+        function inse(){
+        let nli = document.createElement('li');
+        let itv = document.querySelector('#it')
+        let int = document.createTextNode(itv.value);
+        let $dkfo =document.querySelector('#dkfo');
+        nli.appendChild(int);
+        $dkfo.insertBefore(nli,$dkfo.childNodes[0]);
+        itv.value='';
+        console.log(document.querySelectorAll('li'));
+        }
+        function delt(){
+            event.preventDefault()
+            for(i=0; i<document.querySelectorAll('li').length; i++){
+            document.querySelectorAll('li')[i].style.cursor='pointer';
+            document.querySelectorAll('li')[i].addEventListener('click',adde)
+        }  
+        }
+
+        function adde(x){
+            x.currentTarget.remove();
+            for(i=0; i<document.querySelectorAll('li').length; i++){
+            document.querySelectorAll('li')[i].style.cursor='auto';
+            document.querySelectorAll('li')[i].removeEventListener('click',adde)
+            }
+        }
+    </script>
+</body>
+</html>

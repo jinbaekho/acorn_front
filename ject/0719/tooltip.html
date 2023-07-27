@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip</title>
+    <style>
+        *{border: solid;}
+        .tooltip{
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+            cursor: pointer;
+        }
+        .tipcon{
+            visibility: hidden;
+            position: absolute;
+            /* display: none; */
+            background-color: gold;
+            width: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            color: aliceblue;
+            font-weight: bold;
+            text-align: center;
+        }
+        .tooltip:hover .tipcon{
+            visibility: visible;
+            /* display: flex; */
+        }
+    </style>
+</head>
+<body>
+    <h1>툴팁효과 visibility</h1>
+    <div class="tooltip">
+        <span>올리바</span>
+        <div class="tipcon">
+            <p>이것은 툴팁이다</p>
+        </div>
+    </div>
+    
+</body>
+</html>

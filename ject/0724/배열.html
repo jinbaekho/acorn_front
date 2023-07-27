@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+        let 배열=['영','일','이','삼','사'];
+        console.log('과일이름은?'+ 배열[0]+배열[1]);
+        배열[0]='호이가계속되면';
+        console.log(배열);
+        // console.(*)
+        // pop() 마지막을 뺌
+        // push() 마지막에 추가
+        // shift() 처음 뻄
+        // unshift() 처음에 추가
+        // include() 포함하고 있는지, 결과값=true,false
+        // indexOf() 몇번째에 있는지
+        // slice() 잘라낸다 (기존유지)
+        console.log(배열.slice(2));
+        console.log(배열.slice(1,3));
+        // splice(a,b) a부터 b개의 아이템 제거 (기존이 바뀜)
+        console.log(배열.splice(0,2)+' 이(가) 제거됨.')
+        console.log(배열);
+        console.log(배열.push('띠용','또잉'));
+        console.log(배열);
+        console.log(배열.shift());
+        console.log();
+    </script>
+  </body>
+</html>

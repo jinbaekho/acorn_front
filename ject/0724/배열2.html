@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> 배경색 바꾸기 </div>
+    <button onclick="랜덤()">랜덤</button>
+    <script>
+        function 랜덤(){
+            let x=Math.floor(Math.random()*256).toString(16);
+            let y=Math.floor(Math.random()*256).toString(16);
+            let z=Math.floor(Math.random()*256).toString(16);
+            document.querySelector('div').style.backgroundColor="#"+x + y + z
+        }
+    </script>
+</body>
+</html>
