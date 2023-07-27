@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tx {
+        font-size: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tx">명언보기</div>
+    <script>
+      let txing = [
+        "요즘 넷플뭐봄?",
+        "오히려 좋아",
+        "어쩔",
+        "즐길 수 없다면 피해라",
+        "늦었다고 생각할 때가 너무 늦었다",
+        "퉤",
+        "중요한건 어쩌고 저쩌고",
+        "메리메리 리얼 카인드니스 여러분",
+        "진행시켜",
+        "야~~",
+      ];
+      let tx = document.querySelector(".tx");
+      console.log(Date());
+      setTimeout(tttt, 1000);
+      function tttt() {
+        tx.innerHTML =
+          "<p>&quot" + txing[Math.floor(Math.random() * 10)] + "&quot;<p>";
+        setTimeout(tttt, 1000);
+      }
+    </script>
+  </body>
+</html>
