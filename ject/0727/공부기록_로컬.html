@@ -10,7 +10,6 @@
     <form>
       <input type="text" id="it" autofocus />
       <button id="adbt" type="button">추가</button>
-      <button id="delbt">삭제</button>
     </form>
     <hr />
     <div class="itli"></div>
@@ -26,6 +25,7 @@
         }
         showList();
       }
+
       function showList() {
         let list = "<ul>";
         for (i = 0; i < itli.length; i++) {
@@ -33,6 +33,15 @@
         }
         list += "</ul>";
         document.querySelector('.itli').innerHTML=list
+        let secl=document.querySelectorAll('.close')
+        for (i = 0; i < itli.length; i++) {
+          secl[i].addEventListener('click',removeList)
+        }
+      }
+
+      function removeList() {
+        itli.splice(this.getAttribute('id'),1)
+        showList()        
       }
 
       // localStorage.setItem(key,value)
