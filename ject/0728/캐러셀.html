@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+        height: 300px;
+        border: 2px solid gainsboro;
+        font-size: 50px;
+        color: rgba(127, 127, 127, 0.5);
+        background-size: contain;
+
+        -ms-user-select: none;
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      .arrow {
+        z-index: 100;
+      }
+      .arrow:hover {
+        z-index: 100;
+        scale: 1.5;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>← 사진 →</h1>
+    <div class="container">
+      <div class="arrow" id="left">&lang;</div>
+      <div class="arrow" id="right">&rang;</div>
+    </div>
+
+    <script>
+      const cont = document.querySelector(".container");
+      const pic = [
+        "p0.jpeg",
+        "p1.jpeg",
+        "p2.jpeg",
+        "p3.jpeg",
+        "p4.jpeg",
+        "p5.jpeg",
+      ];
+
+      cont.style.backgroundImage = `url(이미지/${pic[0]})`;
+      console.log(pic);
+      const arrows = document.querySelectorAll(".arrow"); 
+
+      i = 0;
+      arrows.forEach((arrow) => {
+        arrow.addEventListener("click", (e) => {
+          if (e.target.id === "left") {
+            i--;
+            if (i == -1) {
+              i = pic.length - 1;
+            }
+          }
+          if (e.target.id === "right") {
+            i++;
+            if (i === pic.length) {
+              i = 0;
+            }
+          }
+          cont.style.backgroundImage = `url(이미지/${pic[i]})`;
+          console.log(pic[i]);
+        });
+      });
+
+      window.addEventListener('contextmenu',e=>{
+        event.preventDefault()
+      })
+    </script>
+  </body>
+</html>

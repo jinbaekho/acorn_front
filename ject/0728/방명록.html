@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방명록 작성</title>
+    <style>
+      table {
+        border: 1px solid gray;
+        border-collapse: collapse;
+      }
+      td,
+      tr,
+      th {
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>방명록</h1>
+    <form>
+      <input type="text" id="name" placeholder="이름" autofocus />
+      <input type="text" id="text" placeholder="내용을 입력해주세요" />
+      <input type="password" id="pw" placeholder="비밀번호" maxlength="4" />
+      <button type="submit" onclick="inse(); return false">추가</button>
+      <button onclick="delt(event); return false">삭제</button>
+    </form>
+    <hr />
+    <table>
+      <tr>
+        <th width="100px">이름</th>
+        <th width="500px">내용</th>
+      </tr>
+    </table>
+    <script>
+      let tabledata = [{n:'이름',t:'내용'}];
+      function inse() {
+          tabledata.push({
+            n: document.querySelector("#name").value,
+            t: document.querySelector("#text").value,
+            p: document.querySelector("#pw").value
+          });
+        // tabledata.n.push(document.querySelector('#name').value)
+        // tabledata.t.push(document.querySelector('#text').value)
+        // tabledata.push(addtext)
+        // document.querySelector('table').innerHTML=tabledata;
+        // confirm.log(document.querySelectorAll('table > tr'));
+
+        document.querySelector("#name").value = "";
+        document.querySelector("#text").value = "";
+        document.querySelector("#pw").value = "";
+        document.querySelector("#name").focus();
+    console.log(tabledata);
+    }
+    console.log(tabledata);
+    </script>
+  </body>
+</html>

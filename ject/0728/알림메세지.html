@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 90vw;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            width: 200px;
+            height: 200px;
+            border-radius: 50px;
+            background-color: rgb(119, 177, 228);
+            font-size: 30px;
+            color: aliceblue;
+            border: 4px solid gray;
+            box-shadow: 5px 5px 10px black;
+        }
+        .NT{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: rgba(255, 0, 0, 0.8);
+            border-radius: 50px;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="notebox"></div>
+    <button id="btn">!!Touch!!<br>!!Me!!</button>
+
+
+    <script>
+        const btn=document.querySelector('#btn');
+        const NB=document.querySelector('.notebox');
+
+        btn.addEventListener('click',()=>{
+            const NT=document.createElement('div');
+            NT.classList.add('NT')
+            NT.innerText='건들지 마시오';
+            NT.style.top=Math.random()*100+'%'
+            NT.style.left=Math.random()*100+'%'
+            NB.appendChild(NT);
+
+            setTimeout(()=>{
+                NT.remove();
+            },3000)
+        })
+    </script>
+</body>
+</html>

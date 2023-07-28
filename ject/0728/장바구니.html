@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pr0ducts{
+            display: flex;
+        }
+        img{
+            width: 150px;
+            height: 200px;
+        }
+        [class*=product]{
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="pr0ducts">
+        <div class="product1">
+            <h1>별장</h1>
+            <img src="/images/별장.png"><br>
+            <button id="bt1" class="bts" value="별장">장바구니에 추가</button>
+        </div>
+        <div class="product2">
+            <h1>빌딩</h1>
+            <img src="/images/빌딩.png"><br>
+            <button id="bt2" class="bts" value="빌딩">장바구니에 추가</button>
+        </div>
+        <div class="product3">
+            <h1>호텔</h1>
+            <img src="/images/호텔.png"><br>
+            <button id="bt3" class="bts" value="호텔">장바구니에 추가</button>
+        </div>
+    </div>
+    
+    <fieldset>
+        <legend>장바구니</legend>
+        <ul class="backpack"></ul>
+    </fieldset>
+    
+    <script>
+
+    console.log(document.querySelectorAll('.bts'));
+    let btlist=document.querySelectorAll('.bts');
+
+
+        let shoplist = [];
+    for(let i=0;i<btlist.length;i++){
+        btlist[i].addEventListener('click',()=>{
+            shoplist.push(btlist[i].value)
+            document.querySelector('.backpack').innerHTML=shoplist;
+            
+        },{once:true});
+    }
+    </script>
+</body>
+</html>
